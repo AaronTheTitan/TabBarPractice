@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BlueViewController.swift
 //  TabBarPractice
 //
 //  Created by Aaron Bradley on 4/14/15.
@@ -8,12 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BlueViewController: UIViewController {
+
+  var text: String?
+  @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      if let text = text {
+        label.text = text
+      }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,13 +26,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-  @IBAction func showTabBarPressed(sender: UIButton) {
-    
-
-  }
-
-
-
 
     /*
     // MARK: - Navigation
