@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrangViewController: UIViewController, UITabBarControllerDelegate {
+class OrangeViewController: UIViewController, UITabBarControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()

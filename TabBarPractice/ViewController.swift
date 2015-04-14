@@ -22,7 +22,26 @@ class ViewController: UIViewController {
     }
     
   @IBAction func showTabBarPressed(sender: UIButton) {
-    
+
+//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let orangeViewController = storyboard?.instantiateViewControllerWithIdentifier("OrangeViewController") as! OrangeViewController
+    let blueViewController = storyboard?.instantiateViewControllerWithIdentifier("BlueViewController") as! BlueViewController
+//    let grayViewController = storyboard?.instantiateViewControllerWithIdentifier("GrayViewController") as? GrayViewController
+
+    // tab bar itesm
+    let orangeTabBarItem = UITabBarItem(title: "Orange", image: nil, selectedImage: nil)
+    let blueTabBarItem = UITabBarItem(title: "Blue", image: nil, selectedImage: nil)
+
+    orangeViewController.tabBarItem = orangeTabBarItem
+    blueViewController.tabBarItem = blueTabBarItem
+
+    let tabBarViewControllers = [orangeViewController, blueViewController]
+
+    let tabBarViewController = UITabBarController()
+    tabBarViewController.viewControllers = tabBarViewControllers
+
+    presentViewController(tabBarViewController, animated: true, completion: nil)
+
 
   }
 
