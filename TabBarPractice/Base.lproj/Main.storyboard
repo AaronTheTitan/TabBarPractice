@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-Jm-37u">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-Jm-37u">
+                                <rect key="frame" x="16" y="289" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,7 +28,7 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="YWG-Jm-37u" secondAttribute="centerX" id="5x4-l5-ZZ9"/>
                             <constraint firstItem="YWG-Jm-37u" firstAttribute="leading" secondItem="utp-yi-QKx" secondAttribute="leadingMargin" id="Jgg-aR-HpF"/>
-                            <constraint firstItem="YWG-Jm-37u" firstAttribute="top" secondItem="tbQ-h5-3VJ" secondAttribute="bottom" constant="8" id="dVE-WX-oIA"/>
+                            <constraint firstAttribute="centerY" secondItem="YWG-Jm-37u" secondAttribute="centerY" constant="0.5" id="frl-To-J5p"/>
                             <constraint firstItem="YWG-Jm-37u" firstAttribute="trailing" secondItem="utp-yi-QKx" secondAttribute="trailingMargin" id="iQK-JM-Myu"/>
                         </constraints>
                     </view>
@@ -104,9 +104,34 @@
                     <view key="view" contentMode="scaleToFill" id="sQb-iG-h7t">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatever you want it to say..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-Ny-hZw">
+                                <rect key="frame" x="16" y="285" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter A String To Pass To Blue..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS2-6G-88E">
+                                <rect key="frame" x="16" y="256" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FS2-6G-88E" firstAttribute="leading" secondItem="sQb-iG-h7t" secondAttribute="leadingMargin" id="1uE-Bm-XIG"/>
+                            <constraint firstAttribute="centerY" secondItem="fIk-Ny-hZw" secondAttribute="centerY" id="4tb-gl-bYJ"/>
+                            <constraint firstItem="fIk-Ny-hZw" firstAttribute="trailing" secondItem="sQb-iG-h7t" secondAttribute="trailingMargin" id="7j9-iT-k9N"/>
+                            <constraint firstAttribute="centerX" secondItem="fIk-Ny-hZw" secondAttribute="centerX" id="CXm-SG-ak4"/>
+                            <constraint firstItem="fIk-Ny-hZw" firstAttribute="top" secondItem="FS2-6G-88E" secondAttribute="bottom" constant="8" id="GnO-lq-MPZ"/>
+                            <constraint firstItem="FS2-6G-88E" firstAttribute="trailing" secondItem="sQb-iG-h7t" secondAttribute="trailingMargin" id="TbX-4Y-YgE"/>
+                            <constraint firstItem="fIk-Ny-hZw" firstAttribute="leading" secondItem="sQb-iG-h7t" secondAttribute="leadingMargin" id="Ukh-5G-9aV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="topRated" id="Cf2-0U-Zll"/>
+                    <connections>
+                        <outlet property="textField" destination="fIk-Ny-hZw" id="kb0-Gc-cSd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvg-wx-qJY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

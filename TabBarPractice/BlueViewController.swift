@@ -16,11 +16,14 @@ class BlueViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      if let text = text {
-        label.text = text
-      }
     }
 
+  override func viewWillAppear(animated: Bool) {
+    if let text = text {
+      label.text = text
+    }
+
+  }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

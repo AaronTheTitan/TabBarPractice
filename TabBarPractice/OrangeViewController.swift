@@ -10,21 +10,26 @@ import UIKit
 
 class OrangeViewController: UIViewController, UITabBarControllerDelegate {
 
+  @IBOutlet weak var textField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
       tabBarController?.delegate = self
 //      tabBarController?.viewControllers?[0] // first view controller
-      if let blueViewController = tabBarController?.viewControllers?[1] as? BlueViewController {
-        blueViewController.text = "What's up from Orange"
 
-      }
-
+//      if let blueViewController = tabBarController?.viewControllers?[1] as? BlueViewController {
+//        blueViewController.text = textField.text
+//
+//      }
 
     }
 
+
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    textField.text = nil
+
   }
 
 
@@ -33,6 +38,7 @@ class OrangeViewController: UIViewController, UITabBarControllerDelegate {
     println("shouldSelect: \(viewController)")
 
     if let blueViewController = viewController as? BlueViewController {
+      blueViewController.text = textField.text
       println("blue!")
     }
 
